@@ -1,24 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Repositories from "./pages/Repositories";
+import Repo_card from "./pages/Repo_card";
+import { BrowserRouter, Switch, NavLink, Route } from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <ul>
+        <NavLink activeStyle={{ color: "red" }} to="/repositories">
+          Repositories
+        </NavLink>
+      </ul>
+
+      <Switch>
+        <Route path="/" exact>
+          <div className="welcome-page">Welcome</div>
+        </Route>
+        <Route path="/repositories" component={Repositories}></Route>
+        <Route path="/repository/:id" component={Repo_card}></Route>
+        <Route path="*">No match</Route>
+      </Switch>
+    </BrowserRouter>
   );
 }
 

@@ -1,0 +1,36 @@
+.repositories {
+  padding: 25px;
+  margin: 10px;
+}
+
+.repositories-grid{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.repositories-item {
+  width: 35%;
+  height: 250px;
+  border: 1px solid gray;
+  margin-bottom: 30px;
+  background: #e7e4e4;
+  text-align: center;
+  padding-top: 30px;
+}
+
+.repositories-item__header{
+  color: rgb(31, 29, 29);
+  font-size: 1rem;
+}
+
+.repositories-item__owner img {
+  padding-top: 10px;
+  border-radius: 50%;
+  width: 70px;
+}
+
+.search {
+  width: 250px;
+  margin-bottom: 20px;
+}

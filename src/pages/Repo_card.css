@@ -1,0 +1,9 @@
+.repo {
+    padding: 25px;
+    margin: 10px;
+  }
+
+.repo img {
+    width: 200px;
+    height: 200px;
+}
